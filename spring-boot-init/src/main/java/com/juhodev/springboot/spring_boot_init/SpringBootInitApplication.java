@@ -1,13 +1,13 @@
-package com.juhodev.springboot.init_spring_boot;
+package com.juhodev.springboot.spring_boot_init;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class InitSpringBootApplication {
+public class SpringBootInitApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(InitSpringBootApplication.class, args);
+		SpringApplication.run(SpringBootInitApplication.class, args);
 	}
 
 }

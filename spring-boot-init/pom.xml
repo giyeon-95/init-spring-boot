@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.juhodev.springboot</groupId>
-	<artifactId>init-spring-boot</artifactId>
+	<artifactId>spring-boot-init</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>init-spring-boot</name>
+	<name>spring-boot-init</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>

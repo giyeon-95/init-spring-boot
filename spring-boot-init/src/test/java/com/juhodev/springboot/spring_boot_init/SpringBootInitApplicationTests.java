@@ -1,10 +1,10 @@
-package com.juhodev.springboot.init_spring_boot;
+package com.juhodev.springboot.spring_boot_init;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class InitSpringBootApplicationTests {
+class SpringBootInitApplicationTests {
 
 	@Test
 	void contextLoads() {
