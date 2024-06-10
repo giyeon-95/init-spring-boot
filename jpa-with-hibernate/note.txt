@@ -1,0 +1,13 @@
+Click table name 이후 아래 진행.
+
+// 데이터 입력
+insert into course(id, name, author)
+values(1, 'Learn AWS', 'juho')
+
+// 테이블 데이터 확인
+select * from course
+
+// 테이블 데이터 삭제
+delete from course where id=1
+
+RUN or Run Selected
