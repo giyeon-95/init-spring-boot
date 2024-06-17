@@ -11,10 +11,12 @@ public class Course {
 
     private String author;
 
+    /* 인수 없는 생성자 */
     public Course() {
 
     }
 
+    /* 인수 생성자  */
     public Course(long id, String name, String author) {
         super();
         this.id = id;
