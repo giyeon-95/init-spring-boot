@@ -61,6 +61,10 @@ public class CourseJdbcRepository {
         springJdbcTemplate.update(DELETE_QUERY, id);
     }
 
+    /* 
+     * queryForObject : 단일 행 결과를 반환 쿼리 
+     * 단일 행을 추출하여 Java 객체로 변환
+    */
     public Course findById(long id) {
         // ResultSet -> Bean => Row Mapper =>
         return springJdbcTemplate.queryForObject(SELECT_QUERY,
