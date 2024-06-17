@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JpaWithHibernateApplication {
 
 	/*
-	 * 정적 URL 구성 전, 아래 URL을 사용하여 H2 데이터베이스에 접속.
+	 * 정적 URL 구성 전, 아래 URL을 사용하여 H2 데이터베이스에 접속. (설정후 Run -> localhost:8080/h2-console 접속)
 	 * 
 	 * 실행시에 아래와 같은 로그가 출력되는데, 이는 H2 데이터베이스의 URL을 의미한다.
 	 * (실행시마다 다른 URL이 출력된다. -> 정적 URL 구성 가능)
