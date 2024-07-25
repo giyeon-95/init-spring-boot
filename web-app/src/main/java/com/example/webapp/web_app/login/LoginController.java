@@ -3,19 +3,43 @@ package com.example.webapp.web_app.login;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class LoginController {
 
-    	
-	///login => com.in28minutes.springboot.myfirstwebapp.login.LoginController => login.jsp
-	
-	@RequestMapping("login")
-	public String gotoLoginPage(@RequestParam String name, ModelMap model) {
-		model.put("name", name);
+	private AuthenticationService authenticationService;
 
-		System.out.println("Request param is " + name); //NOT RECOMMENDED FOR PROD CODE
+	public LoginController(AuthenticationService authenticationService) {
+		this.authenticationService = authenticationService;
+	}
+
+	/// login => com.in28minutes.springboot.myfirstwebapp.login.LoginController =>
+	/// login.jsp
+
+	/* GET controller */
+	@RequestMapping(value = "login", method = RequestMethod.GET)
+	public String gotoLoginPage() {
+		return "login";
+	}
+
+	/* POST controller */
+	@RequestMapping(value = "login", method = RequestMethod.POST)
+	public String gotoWelcomePage(@RequestParam String name,
+			@RequestParam String password, ModelMap model) {
+
+		if (authenticationService.authenticate(name, password)) {
+			/* pass to jsp name value */
+			model.put("name", name);
+
+			/* return welcome jsp */
+			return "welcome";
+		}
+
+		model.put("errorMessage", "Invalid Credentials!");
+
+		/* return login jsp */
 		return "login";
 	}
 
