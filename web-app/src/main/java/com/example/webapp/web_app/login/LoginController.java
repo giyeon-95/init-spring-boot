@@ -5,8 +5,11 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
+/* SessionAttributes : 유지시킬 값을 세션처리 (값을 사용하는 모든 controller에 정의) */
 @Controller
+@SessionAttributes("name")  
 public class LoginController {
 
 	private AuthenticationService authenticationService;
